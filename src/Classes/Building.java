@@ -3,27 +3,26 @@ package Classes;
 
 
 public class Building {
-    private int storeys;
     private Elevator elevator;
 
-    /*public Elevator GetElevator() {
+    public Elevator GetElevator() {
         return elevator;
     }
 
-    private ArrayList<Floor> floors;
+    /*private ArrayList<Floor> floors;
 
     public ArrayList<Floor> GetFloors() {
         return floors;
-    }
-
-
-    public Building(int ElevNum){
-        storeys = ElevNum;
-        new BuildingInfo().SetStoreysNum(ElevNum);
-
-        //elevator=new Elevator();
-        System.out.println("Здание создано. \nВ здании " +storeys+ " этажей");
     }*/
+
+
+    public Building(int elevNum){
+
+        new BuildingInfo().SetStoreysNum(elevNum);
+        //elevator=new Elevator();
+        //new FillBuildingWithStoreys().
+        System.out.println("Здание создано. \nВ здании " +new BuildingInfo().GetStoreysNum()+ " этажей");
+    }
 
 
 }

@@ -1,8 +1,8 @@
 package Classes;
 
-public class BuildingInfo {                     // Класс включающий в себя информацию о здании.
-    private static int storeysNum;
-    public void SetStoreysNum(int num){
+public class BuildingInfo {                     // A class that includes building information.
+    private static int storeysNum;              // I take it out from building class to easier
+    public void SetStoreysNum(int num){         // getting this information from any other class.
         storeysNum=num;
     }
     public int GetStoreysNum(){
