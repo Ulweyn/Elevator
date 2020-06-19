@@ -1,18 +1,18 @@
 package Classes;
 
-import java.util.ArrayList;
+
 
 public class Building {
     private int storeys;
     private Elevator elevator;
 
-    public Elevator getElevator() {
+    /*public Elevator GetElevator() {
         return elevator;
     }
 
     private ArrayList<Floor> floors;
 
-    public ArrayList<Floor> getFloors() {
+    public ArrayList<Floor> GetFloors() {
         return floors;
     }
 
@@ -22,8 +22,8 @@ public class Building {
         new BuildingInfo().SetStoreysNum(ElevNum);
 
         //elevator=new Elevator();
-        System.out.println("Здание создано. \nВ здании " +storeys+" этажей");
-    }
+        System.out.println("Здание создано. \nВ здании " +storeys+ " этажей");
+    }*/
 
 
 }
