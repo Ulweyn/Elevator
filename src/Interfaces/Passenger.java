@@ -1,6 +1,5 @@
 package Interfaces;
 
 public interface Passenger {
-    // We need this interface to create a common parent for all types of passengers.
-
+    // Интерфейс для создания общего родителя для всех типов пассажиров. Например с питомцами.
 }

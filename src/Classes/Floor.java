@@ -23,7 +23,7 @@ public class Floor {
 
     public ArrayList<User> awaiting;
 
-    private void FillAwaiting() {
+    private void FillAwaiting() {                                                           // Функция заполнения этажа ожидающими.
         if(amountOfAwaiting!=0){
             for(int i=0;i<amountOfAwaiting;i++){
                 awaiting.add(i,new User(numOfFloor));
@@ -32,7 +32,7 @@ public class Floor {
         }
     }
 
-    public void AwaitingLog() {// Показываем сколько людей хочет вверх, сколько вниз
+    public void AwaitingLog() {                                                             // Показываем сколько людей хочет вверх, сколько вниз
         int up=0;
         int down=0;
         if(awaiting!=null) {
@@ -50,8 +50,8 @@ public class Floor {
     public Floor(int numOfFloor) {
         SetNumOfFloor(numOfFloor);
         SetAmountOfAwaitigRand();
-        awaiting= new ArrayList<User>();
-        FillAwaiting();
+        awaiting= new ArrayList<>();
+        FillAwaiting();                                                                     // В этом конструкторе заполнение этажа происходит при создании этажа.
 
     }
     public Floor(){}

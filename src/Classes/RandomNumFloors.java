@@ -1,8 +1,8 @@
 package Classes;
 
 public class RandomNumFloors {
-                                            // Set number of storeys is optional, so i take out this method
-    public int GetNum() {                    // from building class
+
+    public int GetNum() {                           // Функция выдающая случайное кол-во этажей согласно условию задачи.
         return (int)(Math.random()*16+5);
     }
 }

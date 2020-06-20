@@ -3,7 +3,7 @@ package Classes;
 import Interfaces.Passenger;
 
 public class User implements Passenger {
-    private int destination;                                                            // Destination
+    private int destination;                                                            // Этаж назначения
     public void SetDestination(int wantTo){
         this.destination=wantTo;
     }
@@ -11,24 +11,23 @@ public class User implements Passenger {
         return destination;
     }
 
-    private int currentFloor;                                                           // Current floor
-    public void SetCurrentFloor(int placedAt){
-        this.currentFloor=placedAt;
+    private int currentFloor;                                                           // Текущий этаж
+    public void SetCurrentFloor(int currentFloor){
+        this.currentFloor=currentFloor;
     }
     public int GetCurrentFloor(){
         return currentFloor;
     }
-    public int GetDestinationRandom(int currentFloor){                                  // When user was created or when he left elevator, he need
-        int destination=currentFloor;                                                   // to chose destination. I've decided to make it random.
-        while(destination==currentFloor){                                               // Change destination until it's no longer the same as current floor.
+    public void SetDestinationRandom(int currentFloor){                                 // Когда пользователь создан или вышел из лифта ему нужно
+        destination=currentFloor;                                                       // выбрать следующий этаж назначения. Используем эту функцию.
+        while(destination==currentFloor){                                               // Меняем этаж назначения пока он не будет отличатся от текущего этажа.
             destination=(int)(Math.random()*((new BuildingInfo()).GetStoreysNum()));
         }
-        return destination;
     }
 
     public User(int currentFloor) {
         SetCurrentFloor(currentFloor);
-        SetDestination(GetDestinationRandom(currentFloor));
+        SetDestinationRandom(currentFloor);
     }
     public User(){}
 
