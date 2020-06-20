@@ -21,13 +21,12 @@ public class Floor {
         return amountOfAwaiting;
     }
 
-    private ArrayList<User> awaiting;
+    public ArrayList<User> awaiting;
 
     private void FillAwaiting() {
         if(amountOfAwaiting!=0){
             for(int i=0;i<amountOfAwaiting;i++){
                 awaiting.add(i,new User(numOfFloor));
-
             }
 
         }

@@ -4,10 +4,6 @@ import java.util.ArrayList;
 
 public class Elevator {
 
-    private int capacity;                                                   //общая вместимость лифта
-    public int GetCapacity(){
-        return capacity;
-    }
     private int currentFloor;
     public void SetCurrentFloor(int num){
         currentFloor=num;
@@ -23,8 +19,12 @@ public class Elevator {
         return currentCapacity;
     }
     private int maxFloor=1;                                                 // по умолчанию равен 2 этажу(сдвиг на единицу по отношению к отображаемому на экране),
-                                                                            // далее будет изменятся в зависимости от заходящих пассажиров
-
+    public void SetMaxFloor(int num){                                       // далее будет изменятся в зависимости от заходящих пассажиров
+        maxFloor=num;
+    }
+    public int GetMaxFloor(){
+        return maxFloor;
+    }
     private boolean direction;                                              // Направление движения лифта true - вверх, false - вниз.
     public void SetDirection(boolean direction) {                           // используется только для теста
         this.direction=direction;
@@ -34,11 +34,11 @@ public class Elevator {
     }
     public ArrayList<User> passengers;
 
-    public Elevator(int capacity)
+    public Elevator()
     {
-        this.capacity=capacity;
+
         currentFloor=0;                                                     //При создании лифта начинаем с первого этажа
-        currentCapacity=capacity;                                           //При создании лифт пуст
+        currentCapacity=new BuildingInfo().GetElevatorCapacity();           //При создании лифт пуст
         direction=true;
         passengers=new ArrayList<User>();
     }

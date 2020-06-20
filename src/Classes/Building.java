@@ -20,7 +20,8 @@ public class Building{
     public Building(int numFloors, int elevCapacity){
 
         new BuildingInfo().SetStoreysNum(numFloors);
-        elevator=new Elevator(elevCapacity);
+        new BuildingInfo().SetElevatorCapacity(elevCapacity);
+        elevator=new Elevator();
         floors = new FillBuildingWithFloors().Fill();
         System.out.println("Здание создано. \nВ здании " +new BuildingInfo().GetStoreysNum()+ " этажей");
     }
