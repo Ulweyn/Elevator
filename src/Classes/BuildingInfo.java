@@ -8,4 +8,5 @@ public class BuildingInfo {                     // A class that includes buildin
     public int GetStoreysNum(){
         return storeysNum;
     }
+
 }

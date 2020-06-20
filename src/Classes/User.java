@@ -20,16 +20,17 @@ public class User implements Passenger {
     }
     public int GetDestinationRandom(int currentFloor){                                  // When user was created or when he left elevator, he need
         int destination=currentFloor;                                                   // to chose destination. I've decided to make it random.
-        while(destination==currentFloor)  {                                             // Change destination until it's no longer the same as current floor.
+        while(destination==currentFloor){                                             // Change destination until it's no longer the same as current floor.
             destination=(int)(Math.random()*((new BuildingInfo()).GetStoreysNum()));
         }
         return destination;
     }
 
-    public User(int currentFloor){
+    public User(int currentFloor) {
         SetCurrentFloor(currentFloor);
         SetDestination(GetDestinationRandom(currentFloor));
     }
+    public User(){}
 
 
 }
